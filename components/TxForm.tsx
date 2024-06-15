@@ -1,3 +1,4 @@
+"use client";
 import React, { useCallback, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@chakra-ui/button';
@@ -7,8 +8,8 @@ import { Input, InputGroup } from '@chakra-ui/input';
 import { Box, Flex, Text } from '@chakra-ui/layout';
 import { useDisclosure } from '@chakra-ui/react';
 import { Textarea } from '@chakra-ui/textarea';
-import { getRailgunSmartWalletContractForNetwork } from '@railgun-community/quickstart';
-import { validateRailgunAddress } from '@railgun-community/quickstart';
+import { getRailgunSmartWalletContractForNetwork, getRailgunWalletAddressData, getRailgunAddress } from '@railgun-community/wallet';
+import { validateRailgunAddress } from '@railgun-community/wallet';
 import { erc20ABI } from '@wagmi/core';
 import { GetNetworkResult, watchNetwork } from '@wagmi/core';
 import { BigNumber, ethers } from 'ethers';
@@ -57,6 +58,7 @@ export const TxForm = ({ recipientAddress }: { recipientAddress?: string }) => {
   const [selectedToken, setSelectedToken] = useState<TokenListContextItem>(tokenList[0]);
   const [validAddress, setValidAddress] = useState(false);
   const [tokenAmount, setTokenAmount] = useState<string>('');
+
   const { config } = usePrepareContractWrite({
     address: selectedToken?.address,
     abi: erc20ABI,

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { parseUnits } from '@ethersproject/units';
-import { populateShield, populateShieldBaseToken } from '@railgun-community/quickstart';
+import { populateShield, populateShieldBaseToken } from '@railgun-community/wallet';
 import {
   NETWORK_CONFIG,
   RailgunERC20Amount,

@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/modal';
 import { Alert, AlertIcon } from '@chakra-ui/react';
 import { Tooltip } from '@chakra-ui/tooltip';
-import { getShieldPrivateKeySignatureMessage } from '@railgun-community/quickstart';
+import { getShieldPrivateKeySignatureMessage } from '@railgun-community/wallet';
 import { ethers } from 'ethers';
 import { parseUnits } from 'ethers/lib/utils.js';
 import { useAccount, useNetwork } from 'wagmi';

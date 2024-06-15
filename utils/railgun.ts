@@ -3,7 +3,7 @@ import {
   loadProvider,
   setLoggers,
   startRailgunEngine,
-} from '@railgun-community/quickstart';
+} from '@railgun-community/wallet';
 import { BrowserLevel } from 'browser-level';
 import localforage from 'localforage';
 import { getNetwork, networks } from './networks';

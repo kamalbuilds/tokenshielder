@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { setProviderForNetwork } from '@railgun-community/quickstart';
+import { setProviderForNetwork } from '@railgun-community/wallet';
 import { BigNumber } from 'ethers';
 import { useNetwork, useProvider } from 'wagmi';
 import { getNetwork, networks } from '@/utils/networks';

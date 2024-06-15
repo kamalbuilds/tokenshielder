@@ -1,8 +1,10 @@
+"use client";
+
 import { Image } from '@chakra-ui/image';
 import { Flex, Heading } from '@chakra-ui/layout';
 import { TxForm } from '@/components/TxForm';
 
-const Home = ({ recipientAddress }: { recipientAddress?: string }) => {
+export default function Home ({ recipientAddress }: { recipientAddress?: string }) {
   return (
     <Flex direction="column" align="center" justify="center">
       <Heading as="h1" size="2xl" mb="1rem">
@@ -25,4 +27,3 @@ const Home = ({ recipientAddress }: { recipientAddress?: string }) => {
   );
 };
 
-export default Home;
